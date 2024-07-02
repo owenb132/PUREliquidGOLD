@@ -136,10 +136,53 @@ footer a {
 }
             background-color: #ffcc33; /* Add a darker background on hover */
         }
-    </style>
+        </style>
+    <script>
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Highlight active navigation link
+            window.addEventListener('scroll', function () {
+                let scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+
+                document.querySelectorAll('nav a').forEach(anchor => {
+                    let section = document.querySelector(anchor.getAttribute('href'));
+                    if (section.offsetTop <= scrollPos && section.offsetTop + section.clientHeight > scrollPos) {
+                        document.querySelector('nav a.active')?.classList.remove('active');
+                        anchor.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Scroll to Top Button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("toTopBtn").style.display = "block";
+            } else {
+                document.getElementById("toTopBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Pure Liquid GOLD Logo" style="width: 100px;">
+        <p>Your ultimate community-driven token</p>
+        <a href="#welcome" style="background-color: #ffdd57; padding: 10px 20px; border-radius: 5px; color: #2c2c2c;">Join Now</a>
     </header>
     <nav>
         <a href="#welcome">WELCOME</a>
