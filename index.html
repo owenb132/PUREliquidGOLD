@@ -242,10 +242,26 @@ Join us on this exciting journey and become a part of the PURE Liquid GOLD famil
 Cheers,
 
 The PURE Liquid GOLD Team</p>
-            </div>
+             </div>
         </div>
     </section>
     <section id="contact">
         <h2>Contact</h2>
         <div class="container">
             <div class="card">
+                <form class="contact-form" action="submit_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" style="background-color: #ffdd57; padding: 10px 20px; border: none; border-radius: 5px; color: #2c2c2c;">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 PURE Liquid GOLD. All rights reserved.</p>
+        <a href="#welcome">Back to top</a>
+    </footer>
+    <button onclick="topFunction()" id="toTopBtn" title="Go to top">Top</button>
+</body>
+</html>
