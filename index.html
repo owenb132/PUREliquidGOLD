@@ -164,19 +164,6 @@ footer a {
             });
         });
 
-        // Modal functionality
-            const modal = document.getElementById('myModal');
-            const modalImg = document.getElementById('img01');
-            document.querySelectorAll('.roadmap-images img').forEach(img => {
-                img.addEventListener('click', function() {
-                    modal.style.display = 'block';
-                    modalImg.src = this.src;
-                });
-            });
-            document.querySelector('.close').addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
-
         // Scroll to Top Button
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
