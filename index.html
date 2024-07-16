@@ -5,139 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
-    font-family: Arial, sans-serif;
-    background-color: #2c2c2c;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-header {
-    background-image: url('banner.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 200px; /* Adjust the height as needed */
-    padding: 60px 20px;
-    text-align: center;
-    color: #ffdd57;
-}
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #444444;
-}
-nav a {
-    margin: 10px;
-    padding: 10px;
-    color: #2c2c2c;
-    background-color: #ffdd57;
-    text-decoration: none;
-    border-radius: 5px;
-}
-nav a:hover {
-    background-color: #ffcc33;
-}
-.title {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2em;
-    color: #ffdd57;
-}
-section {
-    padding: 20px;
-}
-h2 {
-    color: #ffdd57;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.card {
-    background-color: #3b3b3b;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 calc(33% - 40px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.card img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-.roadmap-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Space between the images */
-    justify-content: center; /* Center the images within the container */
-}
-.roadmap-images img {
-    width: calc(50% - 40px); /* Make each image take up about a third of the container width */
-    max-width: 600px; /* Adjust as needed */
-    height: auto;
-    border-radius: 40px;
-    cursor: pointer; /* Add cursor pointer to indicate clickable images */
-}
-.contact-form, .collab-form {
-    display: flex;
-    flex-direction: column;
-}
-.contact-form input, .contact-form textarea, .collab-form input, .collab-form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-footer {
-    background-color: #444444;
-    text-align: center;
-    padding: 20px;
-}
-footer a {
-    color: #ffdd57;
-    text-decoration: none;
-    margin: 0 10px;
-}
-.links-list {
-    list-style: none;
-    padding: 0;
-}
-.links-list li {
-    margin: 10px 0;
-}
-.links-list a {
-    display: block;
-    padding: 10px;
-    background-color: #ffdd57;
-    color: #2c2c2c;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-}
-.links-list a:hover {
-    background-color: #ffcc33;
-}
-/* Go to Top button */
-#toTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #ffdd57; /* Set a background color */
-    color: #2c2c2c; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-}
-#toTopBtn:hover {
-    background-color: #ffcc33; /* Add a darker background on hover */
-}
-            background-color: #ffcc33; /* Add a darker background on hover */
-        }
-        </style>
+        font-family: Arial, sans-serif;
+        background-color: #2c2c2c;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-image: url('banner.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 200px; /* Adjust the height as needed */
+        padding: 60px 20px;
+        text-align: center;
+        color: #ffdd57;
+        position: relative; /* Added */
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #444444;
+      }
+      nav a {
+        margin: 10px;
+        padding: 10px;
+        color: #2c2c2c;
+        background-color: #ffdd57;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      nav a:hover {
+        background-color: #ffcc33;
+      }
+      .title {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 2em;
+        color: #ffdd57;
+      }
+      section {
+        padding: 20px;
+      }
+      h2 {
+        color: #ffdd57;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        background-color: #3b3b3b;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1 1 calc(33% - 40px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .card img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .roadmap-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Space between the images */
+        justify-content: center; /* Center the images within the container */
+      }
+      .roadmap-images img {
+        width: calc(50% - 40px); /* Make each image take up about a third of the container width */
+        max-width: 600px; /* Adjust as needed */
+        height: auto;
+        border-radius: 40px;
+        cursor: pointer; /* Add cursor pointer to indicate clickable images */
+      }
+      .contact-form, .collab-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .contact-form input, .contact-form textarea, .collab-form input, .collab-form textarea {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      footer {
+        background-color: #444444;
+        text-align: center;
+        padding: 20px;
+      }
+      footer a {
+        color: #ffdd57;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .links-list {
+        list-style: none;
+        padding: 0;
+      }
+      .links-list li {
+        margin: 10px 0;
+      }
+      .links-list a {
+        display: block;
+        padding: 10px;
+        background-color: #ffdd57;
+        color: #2c2c2c;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .links-list a:hover {
+        background-color: #ffcc33;
+      }
+      /* Go to Top button */
+      #toTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #ffdd57; /* Set a background color */
+        color: #2c2c2c; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+      }
+      #toTopBtn:hover {
+        background-color: #ffcc33; /* Add a darker background on hover */
+      }
+
+      /* Added styles for the button positioning */
+      .logo-container {
+        position: relative; /* Added */
+        display: inline-block; /* Added */
+      }
+      .logo-container img {
+        display: block; /* Added */
+      }
+      .join-now-button {
+        position: absolute; /* Added */
+        top: 50%; /* Adjust as needed */
+        left: 50%; /* Adjust as needed */
+        transform: translate(-50%, -50%); /* Center the button */
+        background-color: #ffdd57; 
+        padding: 10px 20px; 
+        border-radius: 5px; 
+        color: #2c2c2c;
+        text-decoration: none;
+      }
+
+    </style>
     <script>
         // Smooth scrolling for navigation links
         document.addEventListener('DOMContentLoaded', function () {
@@ -182,6 +202,7 @@ footer a {
 <body>
     <header>
         <img src="logo.png" alt="Pure Liquid GOLD Logo" style="width: 100px;">
+        <p>Your ultimate community-driven token</p>
         <a href="https://linktr.ee/pureliquidgold" style="background-color: #ffdd57; padding: 10px 20px; border-radius: 5px; color: #2c2c2c;">Join Now</a>
     </header>
     <nav>
@@ -236,7 +257,8 @@ The launch on PUUSH.FUN has provided an equitable opportunity for all participan
 
 As hops grow naturally, so too will the value and impact of $BEER.</p>
                 <img src="pub2.jpg" alt="Pub Image 2">
-                <img src="tokenomics.jpg" alt="Tokenomics Image 1">
+                <img src="tokenomics1.jpg" alt="Tokenomics Image 1">
+                <img src="tokenomics2.jpg" alt="Tokenomics Image 2">
             </div>
         </div>
     </section>
@@ -252,6 +274,48 @@ As hops grow naturally, so too will the value and impact of $BEER.</p>
         </div>
     </div>
 </section>
+<section id="investment-log">
+    <h2>Investment Log</h2>
+    <div class="investment-container">
+        <div class="investment-item">
+            <img src="investment.jpg" alt="Investment 1">
+            <p>🚀Introducing the PureLiquidGOLD High Yield Power Engine🚀
+                
+
+We're thrilled to announce a groundbreaking innovation in the Cronos meme world - the first-ever meme token with a high yield power engine! Let us break down what this means for our $BEER lovers:
+                
+
+🔹 **4 High Yield Vaults:** Each at an early stage, stocked with significant amounts of $moon:
+                
+
+Vault 1 - 500k $moon (week1)
+Vault 2 - 500k $moon (week2)
+Vault 3 - 200k $moon (week3)
+Vault 4 - 200k $moon (week4)
+All offering an enticing 183% APR!
+                
+
+🔹 **Monthly Profits:** 500k vaults generating approximately 75k $moon profit from claims, which will be strategically invested as follows:
+- 50% for $BEER buybacks
+- 25% for marketing (also leading to more buybacks)
+- 25% for compounding the vaults
+                
+
+🔹 **Claim Strategy:** 
+- ALL vaults will have claims approximately a week apart.
+- Every week, we will claim 75k $moon.
+- 75% $moon will go towards $BEER buybacks.
+- 25% $moon will be reinvested into the vault that was claimed.
+                
+
+Ps. Important: This example is based on the initial 500k $MOON vaults. The vaults will constantly increase as we add more $MOON to them, thereby boosting the profits and the impact of our high yield power engine!
+                
+
+With the power engine in place, we are poised for tremendous growth and stability. Let’s fuel this engine and watch $BEER soar to new heights! 🌕💥</p>
+        </div>
+    </div>
+</section>
+
     <section id="links">
         <h2>Links</h2>
         <div class="container">
